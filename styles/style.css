@@ -1,0 +1,180 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6; /* Улучшает читаемость */
+}
+
+.container {
+  width: 80%; /* Уменьшаем ширину для более комфортного чтения */
+  margin: 0 auto; /* Центрируем контент */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px; /* Слегка закругляем углы */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;  /* Делаем заголовки жирными */
+}
+
+h4 {
+color: #666;  /* Более мягкий цвет для менее важных заголовков */
+margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: disc; /* Более читаемый стиль списка */
+  padding-left: 20px;
+}
+
+a {
+  color: #007bff; /* Классический синий цвет для ссылок */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для хедера */
+header {
+  background-color: #343a40; /* Темный фон */
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 3em; /* Увеличиваем размер заголовка */
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* Стили для профиля (Обо мне) */
+#about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 150px;  /* Уменьшаем размер картинки профиля */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; /* Обрезаем картинку для круглого вида */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Более заметная тень */
+}
+
+#about p {
+text-align: justify;  /* Выравнивание текста по ширине */
+}
+
+/* Стили для опыта работы и образования */
+.experience-item, .education-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd; /* Тонкая граница */
+  border-radius: 8px;
+}
+
+/* Стили для навыков */
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#skills li {
+  background-color: #e9ecef; /* Светло-серый фон для навыков */
+  padding: 8px 12px;
+  border-radius: 20px; /* Закругленные углы */
+  font-size: 0.9em;  /* Немного уменьшаем размер шрифта */
+}
+
+/* Стили для портфолио */
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Равномерное распределение */
+}
+
+.portfolio-item {
+  width: 300px; /* Фиксированная ширина для элементов портфолио */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Обрезаем содержимое, выходящее за границы */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1); /* Увеличиваем картинку при наведении */
+}
+
+.portfolio-item h3 {
+  padding: 10px;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.portfolio-item p {
+  padding: 0 10px 10px 10px;
+}
+
+/* Стили для контактов */
+#contact p {
+  margin-bottom: 5px;
+}
+
+/* Стили для футера */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+/* Адаптивный дизайн (для мобильных устройств) */
+@media (max-width: 768px) {
+  .container {
+      width: 95%; /* Занимает больше места на маленьких экранах */
+  }
+
+  #about {
+      flex-direction: column; /* Перестраиваем элементы в столбец */
+      align-items: center; /* Центрируем элементы по горизонтали */
+  }
+
+  .profile-pic {
+      width: 120px; /* Уменьшаем размер картинки на маленьких экранах */
+      height: 120px;
+  }
+
+  #portfolio {
+      flex-direction: column; /* Перестраиваем портфолио в столбец */
+      align-items: center; /* Центрируем элементы портфолио */
+  }
+
+  .portfolio-item {
+      width: 90%; /* Занимает больше места по ширине */
+  }
+}
